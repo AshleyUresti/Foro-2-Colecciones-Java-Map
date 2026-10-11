@@ -2,7 +2,7 @@
 
 ## ¿Qué es?
 
-`TreeMap<K, V>` es una implementación de la interfaz `Map` (paquete `java.util`) que almacena **pares clave-valor manteniendo siempre las claves ordenadas**. Internamente se basa en un **árbol rojo-negro**, una estructura de árbol binario de búsqueda auto-balanceada. Implementa las interfaces `SortedMap` y `NavigableMap`, lo que le da métodos de navegación y de rango que otros `Map` no tienen.
+`TreeMap<K, V>` es una implementación de la interfaz `Map` (paquete `java.util`) que almacena pares clave-valor manteniendo siempre las claves ordenadas. Internamente se basa en un árbol rojo-negro, una estructura de árbol binario de búsqueda auto-balanceada. Implementa las interfaces `SortedMap` y `NavigableMap`, lo que le da métodos de navegación y de rango que otros `Map` no tienen.
 
 ```
 Map<K, V>  (interfaz)
@@ -47,10 +47,10 @@ El orden de las claves se define de dos formas:
 
 ---
 
-## ¿Cuándo usarlo?
-- Necesitas recorrer los datos **siempre ordenados por clave**.
-- Necesitas **consultas por rango** ("todo entre X y Y") o **el elemento más cercano** a un valor.
-- Necesitas obtener rápidamente el **mínimo o máximo** de las claves.
+## ¿Cuándo usar `TreeMap`?
+- Necesitas recorrer los datos siempre ordenados por clave.
+- Necesitas consultas por rango ("todo entre X y Y") o el elemento más cercano a un valor.
+- Necesitas obtener rápidamente el mínimo o máximo de las claves.
 
 ---
 
@@ -62,9 +62,9 @@ El orden de las claves se define de dos formas:
 | `firstKey()` / `lastKey()` | Menor / mayor clave. |
 | `firstEntry()` / `lastEntry()` | Par con la menor / mayor clave. |
 | `pollFirstEntry()` / `pollLastEntry()` | Devuelve y elimina el primer / último par. |
-| `floorKey(K)` | Mayor clave **menor o igual** a la dada. |
-| `ceilingKey(K)` | Menor clave **mayor o igual** a la dada. |
-| `lowerKey(K)` / `higherKey(K)` | Mayor clave **estrictamente menor** / menor clave **estrictamente mayor**. |
+| `floorKey(K)` | Mayor clave menor o igual a la dada. |
+| `ceilingKey(K)` | Menor clave mayor o igual a la dada. |
+| `lowerKey(K)` / `higherKey(K)` | Mayor clave estrictamente menor / menor clave estrictamente mayor. |
 | `headMap(K)` | Pares con claves menores que la dada. |
 | `tailMap(K)` | Pares con claves mayores o iguales a la dada. |
 | `subMap(K1, K2)` | Pares con claves en un rango. |
